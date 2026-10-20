@@ -37,14 +37,23 @@ export function ScriptReveal({
   delay?: number;
   animateOnMount?: boolean;
 }) {
-  const target = { clipPath: "inset(-20% -5% -30% -5%)", opacity: 1 };
+  const base = `inline-block font-script whitespace-nowrap text-fire normal-case ${className ?? ""}`;
+
+  // Al montar (hero) se anima con CSS para no esperar al JavaScript: es parte del LCP.
+  if (animateOnMount) {
+    return (
+      <span className={`${base} animate-write`} style={{ animationDelay: `${delay}s` }}>
+        {children}
+      </span>
+    );
+  }
+
   return (
     <motion.span
-      className={`inline-block font-script whitespace-nowrap text-fire normal-case ${className ?? ""}`}
+      className={base}
       initial={{ clipPath: "inset(-20% 100% -30% -5%)", opacity: 0.6 }}
-      {...(animateOnMount
-        ? { animate: target }
-        : { whileInView: target, viewport: { once: true, margin: "-60px" } })}
+      whileInView={{ clipPath: "inset(-20% -5% -30% -5%)", opacity: 1 }}
+      viewport={{ once: true, margin: "-60px" }}
       transition={{ delay, duration: 1.3, ease: [0.45, 0, 0.2, 1] }}
     >
       {children}

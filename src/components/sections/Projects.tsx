@@ -29,7 +29,6 @@ export const Projects = () => {
             <span className="font-script text-3xl text-fire">Hecho a tu nombre</span>
             <p className="mt-2 text-sm leading-relaxed text-industrial-300">
               Fundimos puertas personalizadas con el nombre de tu casa, finca o posada, como las de{" "}
-              <strong className="text-white">«San Cayetano»</strong>.
             </p>
           </Reveal>
         </div>
@@ -45,7 +44,7 @@ export const Projects = () => {
               whileInView={{ opacity: 1, y: 0, clipPath: "inset(0% 0 0 0)" }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ delay: (i % 3) * 0.12, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              aria-label={`Ampliar foto: ${photo.caption}`}
+              aria-label={`Ampliar foto: ${photo.caption || photo.alt}`}
             >
               <Image
                 src={photo.src}

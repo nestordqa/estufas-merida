@@ -11,6 +11,7 @@ import { Catalog } from "@/components/sections/Catalog";
 import { Projects } from "@/components/sections/Projects";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { Contact } from "@/components/sections/Contact";
+import { Faq } from "@/components/sections/Faq";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <Process />
         <Projects />
         <CtaBand />
+        <Faq />
         <Contact />
       </main>
       <Footer />

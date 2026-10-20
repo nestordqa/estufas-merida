@@ -35,7 +35,8 @@ export const Navbar = () => {
         className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
           scrolled && !open ? "border-b border-white/5 bg-industrial-950/80 backdrop-blur-lg" : "bg-transparent"
         }`}
-        initial={{ y: -100 }}
+        // Sin initial: el navbar se pinta con el HTML, sin esperar al JS (LCP en móvil).
+        initial={false}
         animate={{ y: hidden && !open ? -100 : 0 }}
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
       >
@@ -85,7 +86,7 @@ export const Navbar = () => {
               href={siteConfig.whatsappUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden items-center gap-2 rounded-full bg-fire px-5 py-2.5 font-display text-xs font-extrabold tracking-wider text-white uppercase shadow-lg shadow-fire/30 transition hover:bg-fire-hover hover:shadow-fire/50 md:flex"
+              className="hidden items-center gap-2 rounded-full bg-fire px-5 py-2.5 font-display text-xs font-extrabold tracking-wider text-industrial-950 uppercase shadow-lg shadow-fire/30 transition hover:bg-fire-hover hover:shadow-fire/50 md:flex"
             >
               <WhatsAppIcon className="h-4 w-4" />
               Cotizar

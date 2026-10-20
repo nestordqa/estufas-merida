@@ -6,8 +6,14 @@ export const siteConfig = {
   tagline: "Fundición de hierro y aluminio",
   description:
     "Fundición de metales en Mérida, Venezuela. Fabricamos piezas en hierro y aluminio de alta resistencia: estufas a leña y sus componentes, discos y mancuernas de hierro fundido, masas para trapiches, piñones y piezas industriales sobre medida.",
-  // TODO: confirmar el dominio definitivo (se usa para SEO, sitemap y Open Graph).
-  url: "https://estufasmerida.com",
+  // Versión corta (≤160 caracteres) para el snippet de Google.
+  seoDescription:
+    "Fundición en Mérida, Venezuela: piezas de hierro y aluminio para estufas a leña, discos y mancuernas, masas para trapiches y piñones a medida. ¡Cotiza ya!",
+  // Dominio público: canonical, sitemap, Open Graph y datos estructurados salen de aquí.
+  // Si algún día se compra un dominio propio, basta con definir SITE_URL en Netlify.
+  url: (process.env.SITE_URL ?? "https://estufas-merida.netlify.app").replace(/\/$/, ""),
+  // Fecha de la última actualización de contenido (para el sitemap).
+  lastUpdated: "2026-10-20",
 
   whatsappNumber,
   whatsappDisplay: "+58 414-7140722",
@@ -28,7 +34,7 @@ export const siteConfig = {
     full: "Mérida, Estado Mérida, Venezuela",
   },
   hours: [
-    { days: "Lunes a viernes", time: "8:00 a. m. – 5:00 p. m." },
+    { days: "Lunes a viernes", time: "8:00 a. m. – 6:00 p. m." },
     { days: "Sábados", time: "8:00 a. m. – 12:00 m." },
   ],
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=Estufas+M%C3%A9rida+Venezuela",

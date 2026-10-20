@@ -237,7 +237,7 @@ export const Contact = () => {
                   </div>
                   <button
                     type="submit"
-                    className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-fire px-8 py-4 font-display text-sm font-extrabold tracking-wider text-white uppercase shadow-xl shadow-fire/30 transition hover:bg-fire-hover sm:col-span-2"
+                    className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-fire px-8 py-4 font-display text-sm font-extrabold tracking-wider text-industrial-950 uppercase shadow-xl shadow-fire/30 transition hover:bg-fire-hover sm:col-span-2"
                   >
                     <span className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                     Enviar por WhatsApp

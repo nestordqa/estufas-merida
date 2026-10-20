@@ -75,7 +75,7 @@ export const Process = () => {
                 <span
                   className={`absolute top-0 left-0 flex h-13 w-13 items-center justify-center rounded-full border-2 font-display text-lg font-black transition-all duration-500 ${
                     i <= active
-                      ? "border-fire bg-fire text-white shadow-[0_0_30px_var(--color-fire)]"
+                      ? "border-fire bg-fire text-industrial-950 shadow-[0_0_30px_var(--color-fire)]"
                       : "border-industrial-700 bg-industrial-950 text-industrial-500"
                   }`}
                 >

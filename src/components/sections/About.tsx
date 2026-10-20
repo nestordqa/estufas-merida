@@ -47,12 +47,16 @@ export const About = () => {
 
   return (
     <section id="nosotros" className="relative overflow-hidden bg-industrial-900 py-24 sm:py-32">
-      <span
-        className="pointer-events-none absolute top-4 right-0 font-display text-[22vw] leading-none font-black text-white/[0.03] select-none sm:top-0"
+      {/* Marca de agua decorativa en SVG para que no cuente como texto de bajo contraste */}
+      <svg
+        viewBox="0 0 1000 220"
+        className="pointer-events-none absolute top-4 right-0 w-[110vw] max-w-none select-none sm:top-0 sm:w-[95vw]"
         aria-hidden="true"
       >
-        FUEGO
-      </span>
+        <text x="1000" y="190" textAnchor="end" className="fill-white/[0.03] font-display text-[220px] font-black">
+          FUEGO
+        </text>
+      </svg>
 
       <div ref={ref} className="relative mx-auto grid max-w-7xl items-center gap-16 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
         <div className="relative mx-auto w-full max-w-md lg:max-w-none">

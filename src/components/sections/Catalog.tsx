@@ -55,7 +55,7 @@ export const Catalog = () => {
               aria-selected={c.id === activeId}
               onClick={() => setActiveId(c.id)}
               className={`relative rounded-xl px-2 py-3 font-display text-[10px] leading-tight font-extrabold tracking-wider uppercase transition-colors sm:rounded-full sm:px-7 sm:text-xs ${
-                c.id === activeId ? "text-white" : "text-industrial-300 hover:text-white"
+                c.id === activeId ? "text-industrial-950" : "text-industrial-300 hover:text-white"
               }`}
             >
               {c.id === activeId && (
@@ -66,7 +66,7 @@ export const Catalog = () => {
                 />
               )}
               <span className="relative flex flex-col items-center gap-0.5 sm:flex-row sm:gap-1.5">
-                <span className="opacity-70 sm:opacity-100">{c.number}</span>
+                <span>{c.number}</span>
                 <span className="hidden sm:inline">·</span>
                 <span>{c.script}</span>
               </span>
@@ -102,7 +102,7 @@ export const Catalog = () => {
                 href={siteConfig.whatsappUrl(`Hola, quisiera cotizar productos de la línea: ${category.title}.`)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-8 inline-flex items-center gap-3 rounded-full bg-fire px-7 py-4 font-display text-xs font-extrabold tracking-wider text-white uppercase shadow-xl shadow-fire/30 transition hover:bg-fire-hover"
+                className="mt-8 inline-flex items-center gap-3 rounded-full bg-fire px-7 py-4 font-display text-xs font-extrabold tracking-wider text-industrial-950 uppercase shadow-xl shadow-fire/30 transition hover:bg-fire-hover"
               >
                 <WhatsAppIcon className="h-5 w-5" />
                 Cotizar esta línea
@@ -140,7 +140,7 @@ export const Catalog = () => {
                     className={`group relative overflow-hidden rounded-xl border border-industrial-800 bg-industrial-900 text-left ${
                       i === 0 ? "col-span-2 row-span-2 aspect-square md:aspect-auto" : "aspect-square"
                     }`}
-                    aria-label={`Ampliar foto: ${photo.caption ?? photo.alt}`}
+                    aria-label={`Ampliar foto: ${photo.caption || photo.alt}`}
                   >
                     <Image
                       src={photo.src}

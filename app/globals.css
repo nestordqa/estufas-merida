@@ -7,7 +7,7 @@
   --color-industrial-850: #16191d;
   --color-industrial-800: #1f232a; /* Bordes */
   --color-industrial-700: #2c313a;
-  --color-industrial-500: #6b7280;
+  --color-industrial-500: #8b909a; /* contraste ≥4.5:1 sobre el fondo */
   --color-industrial-300: #a7a9b0; /* Texto secundario */
   --color-industrial-100: #f4f4f5; /* Texto principal */
 
@@ -45,6 +45,26 @@
   --animate-spin-slow: spin 22s linear infinite;
   --animate-flicker: flicker 4s ease-in-out infinite;
 
+  /* Entradas del hero en CSS: arrancan en el primer pintado, sin esperar a que
+     cargue el JavaScript (clave para el LCP en móviles). */
+  --animate-rise: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-fade-up: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes rise {
+    from { transform: translateY(115%) rotate(8deg); }
+    to { transform: none; }
+  }
+  --animate-write: write 1.3s cubic-bezier(0.45, 0, 0.2, 1) both;
+
+  /* Caligrafía que se "escribe" de izquierda a derecha */
+  @keyframes write {
+    from { clip-path: inset(-20% 100% -30% -5%); }
+    to { clip-path: inset(-20% -5% -30% -5%); }
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: none; }
+  }
   @keyframes marquee {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
