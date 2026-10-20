@@ -1,26 +1,140 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* Industrial: fondos y textos */
+  --color-industrial-950: #08090b; /* Fondo ultra oscuro */
+  --color-industrial-900: #101215; /* Tarjetas y contenedores */
+  --color-industrial-850: #16191d;
+  --color-industrial-800: #1f232a; /* Bordes */
+  --color-industrial-700: #2c313a;
+  --color-industrial-500: #6b7280;
+  --color-industrial-300: #a7a9b0; /* Texto secundario */
+  --color-industrial-100: #f4f4f5; /* Texto principal */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Fire: naranja de marca (el del post de Instagram) */
+  --color-fire: #ff8a00;
+  --color-fire-hover: #ff6a00;
+  --color-fire-light: #ffb547;
+  --color-fire-deep: #e04e00;
+  --color-fire-glow: rgb(255 138 0 / 0.22);
+  --color-whatsapp: #25d366;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-script: var(--font-mr-dafoe), cursive;
+
+  --background-image-magma-gradient: radial-gradient(
+    circle at center,
+    rgb(255 138 0 / 0.14) 0%,
+    rgb(8 9 11 / 0) 70%
+  );
+  --background-image-molten: linear-gradient(
+    100deg,
+    #ff6a00 0%,
+    #ffb547 25%,
+    #fff1c1 40%,
+    #ff8a00 55%,
+    #e04e00 75%,
+    #ff8a00 100%
+  );
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 40s linear infinite;
+  --animate-molten: molten 6s ease-in-out infinite;
+  --animate-ping-slow: ping-slow 2.6s cubic-bezier(0, 0, 0.2, 1) infinite;
+  --animate-spin-slow: spin 22s linear infinite;
+  --animate-flicker: flicker 4s ease-in-out infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes marquee-reverse {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+  }
+  @keyframes molten {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  @keyframes ping-slow {
+    0% { transform: scale(1); opacity: 0.55; }
+    80%, 100% { transform: scale(1.9); opacity: 0; }
+  }
+  @keyframes flicker {
+    0%, 100% { opacity: 0.85; }
+    20% { opacity: 1; }
+    45% { opacity: 0.7; }
+    70% { opacity: 0.95; }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Texto con efecto de metal fundido */
+@utility text-molten {
+  background-image: var(--background-image-molten);
+  background-size: 250% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Texto solo contorno, para los títulos gigantes de fondo */
+@utility text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px currentColor;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background-color: var(--color-industrial-950);
+    color: var(--color-industrial-100);
+    font-family: var(--font-sans);
+  }
+
+  /* clip (y no hidden) evita el scroll horizontal en móvil sin romper position: sticky */
+  html,
+  body {
+    overflow-x: clip;
+  }
+
+  /* Grano de película para el look industrial */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0.06;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+  }
+
+  ::selection {
+    background-color: var(--color-fire);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-fire);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
+  }
 }
