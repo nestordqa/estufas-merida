@@ -15,7 +15,7 @@ export function SectionHeading({ script, title, intro, align = "left", className
   const centered = align === "center";
   return (
     <div className={`${centered ? "mx-auto text-center" : ""} max-w-3xl ${className ?? ""}`}>
-      <ScriptReveal className="relative z-10 -mb-3 -rotate-3 text-4xl sm:text-5xl md:text-6xl">{script}</ScriptReveal>
+      <ScriptReveal className="relative z-10 mb-1 -rotate-2 text-2xl sm:text-3xl md:text-4xl">{script}</ScriptReveal>
       <Reveal delay={0.15}>
         <h2 className="font-display text-4xl leading-[0.95] font-black tracking-tight text-white sm:text-5xl md:text-6xl">
           {title}

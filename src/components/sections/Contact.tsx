@@ -150,7 +150,7 @@ export const Contact = () => {
                   >
                     <CheckCircle2 className="h-20 w-20 text-fire" />
                   </motion.div>
-                  <p className="mt-6 font-script text-5xl text-fire">¡Gracias!</p>
+                  <p className="mt-6 font-script text-3xl text-fire">¡Gracias!</p>
                   <p className="mt-2 max-w-sm text-industrial-300">
                     Abrimos WhatsApp con tu mensaje listo. Solo tienes que pulsar enviar y te responderemos pronto.
                   </p>

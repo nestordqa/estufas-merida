@@ -69,7 +69,7 @@ function TiltCard({ category, index }: { category: Category; index: number }) {
         </span>
 
         <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8" style={{ transform: "translateZ(40px)" }}>
-          <span className="font-script text-3xl text-fire">{category.script}</span>
+          <span className="font-script text-lg text-fire">{category.script}</span>
           <h3 className="mt-1 font-display text-2xl leading-tight font-black text-white">{category.title}</h3>
           <p className="mt-3 text-sm leading-relaxed text-industrial-300">{category.short}</p>
           <span className="mt-5 block h-1 w-12 bg-fire transition-all duration-500 group-hover:w-full" />

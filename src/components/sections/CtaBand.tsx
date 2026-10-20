@@ -27,7 +27,7 @@ export const CtaBand = () => {
       <BrushCorner className="absolute -right-4 -bottom-4 w-36 rotate-180 sm:w-52" delay={0.8} />
 
       <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
-        <ScriptReveal className="relative z-10 -mb-4 -rotate-3 text-[11vw] sm:text-7xl">¿Tienes un proyecto?</ScriptReveal>
+        <ScriptReveal className="relative z-10 mb-2 -rotate-2 text-[7.5vw] sm:text-4xl md:text-5xl">¿Tienes un proyecto?</ScriptReveal>
         <Reveal delay={0.15}>
           <h2 className="font-display text-5xl leading-[0.9] font-black text-white sm:text-7xl md:text-8xl">
             Cotiza tu pieza <span className="animate-molten text-molten">hoy</span>

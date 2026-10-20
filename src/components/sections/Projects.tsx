@@ -26,7 +26,7 @@ export const Projects = () => {
             intro="Cocinas, fogones y hornos de leña levantados en ladrillo por constructores de la región con nuestras piezas fundidas."
           />
           <Reveal delay={0.2} className="max-w-sm rounded-2xl border border-fire/40 bg-industrial-950 p-6">
-            <span className="font-script text-3xl text-fire">Hecho a tu nombre</span>
+            <span className="font-script text-lg text-fire">Hecho a tu nombre</span>
             <p className="mt-2 text-sm leading-relaxed text-industrial-300">
               Fundimos puertas personalizadas con el nombre de tu casa, finca o posada, como las de{" "}
             </p>
@@ -56,7 +56,7 @@ export const Projects = () => {
               />
               <div className="absolute inset-0 bg-linear-to-t from-industrial-950/90 via-industrial-950/10 to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-100" />
               <div className="absolute inset-x-0 bottom-0 translate-y-2 p-5 transition-transform duration-500 group-hover:translate-y-0">
-                <span className="font-script text-3xl text-fire">{photo.caption}</span>
+                <span className="font-script text-lg text-fire">{photo.caption}</span>
               </div>
               <Expand className="absolute top-4 right-4 h-5 w-5 text-white opacity-0 transition-opacity group-hover:opacity-100" />
             </motion.button>

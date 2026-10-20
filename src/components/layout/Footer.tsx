@@ -24,7 +24,7 @@ export const Footer = () => {
             />
             <div>
               <p className="font-display text-xl font-black tracking-wider text-white">ESTUFAS MÉRIDA</p>
-              <p className="font-script text-2xl text-fire">{siteConfig.tagline}</p>
+              <p className="font-script text-sm text-fire">{siteConfig.tagline}</p>
             </div>
           </div>
           <p className="mt-6 max-w-md text-sm leading-relaxed text-industrial-300">

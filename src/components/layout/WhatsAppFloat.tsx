@@ -38,7 +38,7 @@ export function WhatsAppFloat() {
             >
               <X className="h-3 w-3" />
             </button>
-            <span className="block font-script text-2xl leading-none text-fire-deep">¡Hola!</span>
+            <span className="block font-script text-lg leading-none text-fire-deep">¡Hola!</span>
             ¿Necesitas una pieza? Cotiza por WhatsApp.
           </motion.div>
         )}

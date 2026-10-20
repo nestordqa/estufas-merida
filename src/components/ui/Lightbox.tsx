@@ -116,7 +116,7 @@ export function Lightbox({ photos, index, onChange }: LightboxProps) {
               />
               {photo.caption && (
                 <figcaption className="mt-4 text-center">
-                  <span className="font-script text-3xl text-fire">{photo.caption}</span>
+                  <span className="font-script text-lg text-fire">{photo.caption}</span>
                 </figcaption>
               )}
             </motion.figure>

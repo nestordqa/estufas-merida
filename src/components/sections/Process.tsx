@@ -57,7 +57,7 @@ export const Process = () => {
               <div className="absolute inset-0 bg-linear-to-t from-industrial-950 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6">
                 <span className="font-display text-8xl leading-none font-black text-white/90">0{active + 1}</span>
-                <span className="block font-script text-3xl text-fire">{step.title}</span>
+                <span className="block font-script text-lg text-fire">{step.title}</span>
               </div>
             </div>
           </div>

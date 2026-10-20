@@ -55,7 +55,7 @@ export const Navbar = () => {
               <span className="block font-display text-base font-black tracking-wider text-white sm:text-lg">
                 ESTUFAS MÉRIDA
               </span>
-              <span className="font-script text-lg text-fire">Fundición</span>
+              <span className="font-script text-xs text-fire">Fundición</span>
             </span>
           </a>
 
@@ -138,7 +138,7 @@ export const Navbar = () => {
               exit={{ opacity: 0 }}
               transition={{ delay: 0.7 }}
             >
-              <span className="font-script text-4xl text-fire">¿Hablamos?</span>
+              <span className="font-script text-2xl text-fire">¿Hablamos?</span>
               <a
                 href={siteConfig.whatsappUrl()}
                 target="_blank"

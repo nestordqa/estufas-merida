@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Montserrat, Mr_Dafoe, Open_Sans } from "next/font/google";
+import { Bree_Serif, Montserrat, Open_Sans } from "next/font/google";
 import { siteConfig } from "@/config/site";
 import { structuredData } from "@/lib/structured-data";
 import { MotionProvider } from "@/components/layout/MotionProvider";
@@ -15,9 +15,9 @@ const openSans = Open_Sans({
   subsets: ["latin"],
 });
 
-// La caligrafía naranja del post de Instagram
-const mrDafoe = Mr_Dafoe({
-  variable: "--font-mr-dafoe",
+// Fuente de acento naranja
+const breeSerif = Bree_Serif({
+  variable: "--font-bree-serif",
   weight: "400",
   subsets: ["latin"],
 });
@@ -100,7 +100,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es-VE" className={`${montserrat.variable} ${openSans.variable} ${mrDafoe.variable} antialiased`}>
+    <html lang="es-VE" className={`${montserrat.variable} ${openSans.variable} ${breeSerif.variable} antialiased`}>
       <body>
         <script
           type="application/ld+json"

@@ -73,7 +73,7 @@ export const Hero = () => {
             <ScriptReveal
               animateOnMount
               delay={0.5}
-              className="relative z-10 -mb-3 -rotate-6 text-[8.5vw] sm:-mb-5 sm:text-6xl md:text-7xl"
+              className="relative z-10 mb-2 -rotate-2 text-[6.5vw] sm:text-4xl md:text-5xl"
             >
               Fundición &amp; Metalurgia
             </ScriptReveal>
@@ -135,7 +135,7 @@ export const Hero = () => {
         href="#lineas"
         className="absolute right-28 bottom-16 z-10 hidden flex-col items-center lg:flex"
       >
-        <span className="font-script text-2xl text-white/80">Descubre más</span>
+        <span className="font-script text-base text-white/80">Descubre más</span>
         <HandArrow className="h-14 w-10" delay={2} />
       </a>
     </section>
