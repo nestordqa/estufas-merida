@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Bree_Serif, Montserrat, Open_Sans } from "next/font/google";
+import { Montserrat, Open_Sans, Zilla_Slab } from "next/font/google";
 import { siteConfig } from "@/config/site";
 import { structuredData } from "@/lib/structured-data";
 import { MotionProvider } from "@/components/layout/MotionProvider";
@@ -16,9 +16,10 @@ const openSans = Open_Sans({
 });
 
 // Fuente de acento naranja
-const breeSerif = Bree_Serif({
-  variable: "--font-bree-serif",
-  weight: "400",
+const zillaSlab = Zilla_Slab({
+  variable: "--font-zilla-slab",
+  // Solo seminegrita y negrita: el texto de acento sin peso explícito usa la 600
+  weight: ["600", "700"],
   subsets: ["latin"],
 });
 
@@ -100,7 +101,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es-VE" className={`${montserrat.variable} ${openSans.variable} ${breeSerif.variable} antialiased`}>
+    <html lang="es-VE" className={`${montserrat.variable} ${openSans.variable} ${zillaSlab.variable} antialiased`}>
       <body>
         <script
           type="application/ld+json"
