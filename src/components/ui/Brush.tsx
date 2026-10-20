@@ -86,29 +86,6 @@ export const BrushUnderline = ({ className, delay = 0.3 }: { className?: string;
   />
 );
 
-/** Banda blanca de brocha detrás de un texto (como el "REALLYGREATSITE.COM" del post). */
-export const BrushBanner = ({
-  className,
-  color = "#fff",
-  delay = 0.2,
-}: {
-  className?: string;
-  color?: string;
-  delay?: number;
-}) => (
-  <BrushStroke
-    viewBox="0 0 600 80"
-    d="M10 42 C 160 34, 420 48, 590 38"
-    strokeWidth={62}
-    linecap="butt"
-    roughness={14}
-    color={color}
-    className={className}
-    delay={delay}
-    duration={0.8}
-  />
-);
-
 /** Garabatos de brocha para las esquinas. */
 export const BrushCorner = ({ className, delay = 0.6 }: { className?: string; delay?: number }) => (
   <BrushStroke
