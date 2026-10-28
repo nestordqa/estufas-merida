@@ -10,8 +10,8 @@ export const siteConfig = {
   seoDescription:
     "Fundición en Mérida, Venezuela: piezas de hierro y aluminio para estufas a leña, discos y mancuernas, masas para trapiches y piñones a medida. ¡Cotiza ya!",
   // Dominio público: canonical, sitemap, Open Graph y datos estructurados salen de aquí.
-  // Si algún día se compra un dominio propio, basta con definir SITE_URL en Netlify.
-  url: (process.env.SITE_URL ?? "https://estufas-merida.netlify.app").replace(/\/$/, ""),
+  // Se puede sobrescribir con la variable SITE_URL (p. ej. en Netlify).
+  url: (process.env.SITE_URL ?? "https://estufas-merida.com").replace(/\/$/, ""),
   // Fecha de la última actualización de contenido (para el sitemap).
   lastUpdated: "2026-10-20",
 
