@@ -105,12 +105,13 @@ export const structuredData = {
             areaServed: "VE",
             seller: { "@id": ids.business },
             itemOffered: {
-              "@type": "Product",
+              // Service y no Product: sin precio publicado, Google marca los Product como no válidos.
+              "@type": "Service",
               name: item,
               category: c.title,
-              brand: { "@type": "Brand", name: siteConfig.name },
-              manufacturer: { "@id": ids.business },
-              material: c.id === "fitness" ? "Hierro fundido" : "Hierro y aluminio fundido",
+              serviceType: c.id === "fitness" ? "Fundición de hierro" : "Fundición de hierro y aluminio",
+              provider: { "@id": ids.business },
+              areaServed: "VE",
             },
           })),
         })),
